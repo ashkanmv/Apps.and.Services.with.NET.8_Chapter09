@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RabbitMQ.Client" Version="6.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.Queue.Models\Northwind.Queue.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Northwind.Common.EntityModels.SqlServer">
+      <HintPath>..\..\..\apps-services-net8\code\Chapter03\Northwind.Common.DataContext.SqlServer\bin\Debug\net8.0\Northwind.Common.EntityModels.SqlServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+	<ItemGroup>
+		<Using Include="System.Console" Static="true" />
+	</ItemGroup>
+</Project>

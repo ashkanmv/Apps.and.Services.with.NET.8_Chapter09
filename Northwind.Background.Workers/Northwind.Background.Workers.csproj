@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Northwind.Background.Workers-8fdf6785-3d40-4ce9-98eb-9706e910b1fc</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Northwind.Queue.Models\Northwind.Queue.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Northwind.Common.EntityModels.SqlServer">
+      <HintPath>..\..\..\apps-services-net8\code\Chapter03\Northwind.Common.DataContext.SqlServer\bin\Debug\net8.0\Northwind.Common.EntityModels.SqlServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
